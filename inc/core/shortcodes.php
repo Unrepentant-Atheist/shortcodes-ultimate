@@ -66,7 +66,7 @@ class Su_Shortcodes {
             $atts['icon'] = '<i class="fa fa-' . trim( str_replace( 'icon:', '', $atts['icon'] ) ) . '" style="font-size:' . $atts['size'] . 'px;color:' . $atts['icon_color'] . '"></i>&nbsp;';
             su_query_asset( 'css', 'font-awesome' );
         }
-        
+
         // Uploaded icon
         elseif ( $atts['icon'] == '') {
             $atts['icon'] = '';
@@ -1120,7 +1120,7 @@ class Su_Shortcodes {
                 // Open slide
                 $return .= '<div class="su-carousel-slide">';
                 // Slide content with link
-                if ( $slide['link'] ) $return .= '<a href="' . $slide['link'] . '"' . $target . 'title="' . esc_attr( $slide['title'] ) . '"><img src="' . $image['url'] . '" alt="' . esc_attr( $slide['title'] ) . '" />' . $title . '</a>';
+                if ( $slide['link'] ) $return .= '<a href="' . $slide['link'] . '"' . $target . ' title="' . esc_attr( $slide['title'] ) . '"><img src="' . $image['url'] . '" alt="' . esc_attr( $slide['title'] ) . '" />' . $title . '</a>';
                 // Slide content without link
                 else $return .= '<a><img src="' . $image['url'] . '" alt="' . esc_attr( $slide['title'] ) . '" />' . $title . '</a>';
                 // Close slide
